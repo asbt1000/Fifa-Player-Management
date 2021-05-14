@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+    <body  style="background: linear-gradient(to right,#13f973, #9ff4bf);overflow:hidden; height:100%;" >
+    
+        <div >     
+    <ul class='header'>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../search_player/player_search.html">Search</a> </li>
+    <li><a href="../update_player/update.html">Update</a></li>
+    <li><a href="../insert_player/insert_new_player.html">Insert</a></li>
+    <li><a href="../database/database.php">Database</a></li>
+    </ul>
+ </div> 
+        <img src="pqr.jpg" style="height: 300px;width: 300px;margin-left: 18px;margin-top: 60px;">
+        <img src="xyz.jpg" style="height: 300px;width: 300px;margin-left: 50px;margin-top: -350px;">
+        <img src="ghi.jpg" style="height: 300px;width: 300px;margin-left: 170px;margin-top: -380px;">
+        <br>
+    <div>
+	   <form action="php/player_search.php" method="post">
+        <select id="category" name="choices-single-defaul" >
+<option value="category" selected disabled hidden>Category</option>  
+<option value="age">Age</option>
+  <option value="nationality">Nationality</option>
+  <option value="overall rating">Overall Rating</option>
+  <option value="player id">Player Id</option>
+  <option value="player name">Player name</option>
+  <option value="playing position">Player position</option>   <option value="team">Team</option>
+        </select>
+        </div>
+        <div id="searchBox">
+        <input type="text" class="text" placeholder="Search..." name="input_search_keyword">
+        <button type="submit" style="height: 44px;width: 38px;background-color: #118209;border-radius: 10px; box-shadow: 0px 4px 4px 4px #143556;" onclick="php/player_search.php;"><i class="fa fa-search"></i></button>
+</form>
+        </div>
+        
+    </body>
+</html>
+
+

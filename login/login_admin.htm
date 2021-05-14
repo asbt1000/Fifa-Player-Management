@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("secure.jpg");
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color:#00e6e6;
+    opacity:0.7;
+    position: relative;
+    left: 40px;
+    top:100px;
+    border-radius: 8px;
+    border:none;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 5px;
+    background: #ccffff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: white;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body class="bg-img">
+
+<div >
+  <form  class="container" align="center">
+<br>
+<br>
+    <h style="color:white;font-size: 250%;"><b>WELCOME</b></h>
+    <br>
+
+<br>
+<br> 
+   <input id="username" type="text" placeholder="Enter Username" name="username"  required>
+    <input id="password" type="password" placeholder="Enter Password" name="psw"  required>
+
+    <button id="submit" type="submit" class="btn" style="color:#00e6e6;" onclick="return validate()"><b>LOGIN</b></button>
+<br>
+<br> 
+
+    </div>  
+</form>
+</div>
+<script>
+var attempts=3;
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "admin" && password == "admin"){
+window.location= "../index.html"; // Redirecting to other page.
+alert ("Login successfully");
+return false;
+}
+else if ( username == "department" && password == "department"){
+window.location= "department.htm"; // Redirecting to other page.
+alert ("Login successfully");
+return false;
+}
+else if ( username == "student" && password == "student"){
+window.location= "student.htm"; // Redirecting to other page.
+alert ("Login successfully");
+return false;
+}
+else{
+alert("INCORRECT LOGIN CREDENTIALS");
+}
+}
+</script>
+</body>
+</html>
